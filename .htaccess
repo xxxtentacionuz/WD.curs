@@ -8,7 +8,7 @@ RewriteRule ^(frontend|backend|uploads|asset)/web/ - [L]
 
 RewriteRule ^uploads/(.*)$ backend/web/uploads/$1 [L]
 RewriteRule ^asset/(.*)$ frontend/web/olog/$1 [L]
-RewriteRule ^admn(/(.*))?$ backend/web/$2 [S=1]
+RewriteRule ^admn(/(.*))?$ backend/web/$2 [S=2]
 RewriteRule ^api(/(.*))?$ api/web/$2 [S=1]
 
 # handle the case of frontend
