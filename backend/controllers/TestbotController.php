@@ -60,7 +60,7 @@ class TestbotController extends Controller
             $z = substr($text, 0, $c);
             $x = substr($text, $c);
             $x = trim($x, '*');
-            echo (int)$z * (int)$x ;
+            $text1 = (int)$z * (int)$x ;
         }elseif ($d == true)
         {
             $z = substr($text, 0, $d);
