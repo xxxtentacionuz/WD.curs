@@ -10,7 +10,7 @@ class TestbotController extends Controller
 {
     public function actionTest()
     {
-        $text = '2*11';
+        $text = 'shahboz';
         $a = strpos($text, '+');
         $b = strpos($text, '-');
         $c = strpos($text, '*');
@@ -25,7 +25,11 @@ class TestbotController extends Controller
             $x = trim($x, '*');
 
              echo (int)$z * (int)$x ;
-        }else{
+        }elseif ($text == 'shahboz')
+        {
+           echo  $text1 = 'shahboz';
+        }
+        else{
             $text1 = 'xato';
         }
     }
@@ -52,11 +56,11 @@ class TestbotController extends Controller
             $x = trim($x, '+');
             $text1 = (int)$z + (int)$x ;
         }
-        elseif ($text === 'Ahmad'& 'Ahmadbek')
+        elseif ($text == 'Ahmad'& 'Ahmadbek')
         {
             $text1 = 'Ahamd ukam kut bumay botni tarqat';
         }
-        elseif ($text === 'Shahboz')
+        elseif ($text == 'Shahboz')
         {
             $text1 = 'Shahboz dustim kut bumay botni tarqat';
         }
