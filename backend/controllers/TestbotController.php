@@ -21,13 +21,10 @@ class TestbotController extends Controller
         if ($c == true)
         {
             $z = substr($text, 0, $c);
-            $x = substr($text, $a);
-             $x=(int)$x * $z=(int)$z;
-            echo $x * $z;
+            $x = substr($text, $c);
+            $x = trim($x, '*');
 
-
-
-
+             echo (int)$z * (int)$x ;
         }else{
             $text1 = 'xato';
         }
@@ -47,10 +44,6 @@ class TestbotController extends Controller
         $b = strpos($text, '-');
         $c = strpos($text, '*');
         $d = strpos($text, ':');
-        $x ='10';
-        $z ='10';
-        $x= (int)$x;
-        $z= (int)$z;
 
         if ($a == true)
         {
@@ -60,17 +53,18 @@ class TestbotController extends Controller
         }elseif ($b == true)
         {
             $z = substr($text, 0, $b);
-            $x = substr($text, $a);
+            $x = substr($text, $b);
             $text1 = $z-$x;
         }elseif ($c == true)
         {
             $z = substr($text, 0, $c);
-            $x = substr($text, $a);
-            $text1 = $z*$x;
+            $x = substr($text, $c);
+            $x = trim($x, '*');
+            echo (int)$z * (int)$x ;
         }elseif ($d == true)
         {
             $z = substr($text, 0, $d);
-            $x = substr($text, $a);
+            $x = substr($text, $d);
             $text1 = $z/$x;
         }else
         {
