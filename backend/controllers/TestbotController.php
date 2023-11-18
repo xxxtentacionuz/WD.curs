@@ -24,10 +24,10 @@ class TestbotController extends Controller
             $x = substr($text, $c);
             $x = trim($x, '*');
 
-             echo (int)$z * (int)$x ;
-        }elseif ($text == 'shahboz')
+
+        }elseif ($text == 'shahboz'and 'salom')
         {
-           echo  $text1 = 'shahboz';
+           echo  $text1 = 'shahboz alo';
         }
         else{
             $text1 = 'xato';
@@ -43,14 +43,14 @@ class TestbotController extends Controller
 
         $chat_id = $data['message']['from']['id'];
         $text = isset($data['message']['text']) ? $data['message']['text']: '';
-//
-//        $a = strpos($text, '+');
-//        $b = strpos($text, '-');
-//        $c = strpos($text, '*');
-//        $d = strpos($text, '/');
+
+        $a = strpos($text, '+');
+        $b = strpos($text, '-');
+        $c = strpos($text, '*');
+        $d = strpos($text, '/');
 
 
-        if ($text == 'Ahmad'& 'Ahmadbek')
+        if ($text == 'Ahmad'and 'Ahmadbek')
         {
             $text1 = 'Ahamd ukam kut bumay botni tarqat';
         }
