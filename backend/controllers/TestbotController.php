@@ -21,7 +21,7 @@ class TestbotController extends Controller
 
 
         $token = "6816596578:AAGcblyvf4sGmrvMY3iPf4TCou2nwnMiQFI";
-        $url = 'https://api.telegram.org/bot' . $token . '/sendMessage?' . http_build_query($data);
+        $url = 'https://api.telegram.org/bot'.$token.'/sendMessage?'.http_build_query($data);
         $curl = curl_init($url);
 //        curl_setopt($curl, CURLOPT_POST, true);
 //        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
