@@ -43,11 +43,11 @@ class TestbotController extends Controller
 
         $chat_id = $data['message']['from']['id'];
         $text = isset($data['message']['text']) ? $data['message']['text']: '';
-
-        $a = strpos($text, '+');
-        $b = strpos($text, '-');
-        $c = strpos($text, '*');
-        $d = strpos($text, '/');
+//
+//        $a = strpos($text, '+');
+//        $b = strpos($text, '-');
+//        $c = strpos($text, '*');
+//        $d = strpos($text, '/');
 
 
         if ($text == 'Ahmad'& 'Ahmadbek')
