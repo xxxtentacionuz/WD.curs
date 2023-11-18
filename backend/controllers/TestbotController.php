@@ -40,42 +40,11 @@ class TestbotController extends Controller
         $chat_id = $data['message']['from']['id'];
         $text = isset($data['message']['text']) ? $data['message']['text']: '';
 
-        $a = strpos($text, '+');
-        $b = strpos($text, '-');
-        $c = strpos($text, '*');
-        $d = strpos($text, ':');
-
-        if ($a == true)
-        {
-            $z = substr($text, 0, $a);
-            $x = substr($text, $a);
-            $text1 = $z+$x;
-        }elseif ($b == true)
-        {
-            $z = substr($text, 0, $b);
-            $x = substr($text, $b);
-            $text1 = $z-$x;
-        }elseif ($c == true)
-        {
-            $z = substr($text, 0, $c);
-            $x = substr($text, $c);
-            $x = trim($x, '*');
-            $text1 = (int)$z * (int)$x ;
-        }elseif ($d == true)
-        {
-            $z = substr($text, 0, $d);
-            $x = substr($text, $d);
-            $x = trim($x, '*');
-            $text1 = (int)$z * (int)$x ;
-        }else
-        {
-            $text1 = $text;
-        }
 
 
 
 
-        $this->sendMessage($chat_id, $text1);
+        $this->sendMessage($chat_id, $text);
 
     }
 
