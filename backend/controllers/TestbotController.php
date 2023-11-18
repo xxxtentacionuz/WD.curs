@@ -8,6 +8,25 @@ use yii\web\Controller;
 
 class TestbotController extends Controller
 {
+    public function actionTest()
+    {
+        $text = '10+10';
+        $a = strpos($text, '+');
+        $b = strpos($text, '-');
+        $c = strpos($text, '*');
+        $d = strpos($text, ':');
+
+        if ($a == true)
+        {
+            $z = substr($text, 0, $a);
+            $x = substr($text, $a);
+            echo  $z+$x;
+
+        }else{
+            $text1 = 'xato';
+        }
+    }
+
     public $enableCsrfValidation = false;
 
     public function actionWebhook()
@@ -17,7 +36,25 @@ class TestbotController extends Controller
 
         $chat_id = $data['message']['from']['id'];
         $text = isset($data['message']['text']) ? $data['message']['text']: '';
-        $this->sendMessage($chat_id, $text);
+
+        $a = strpos($text, '+');
+        $b = strpos($text, '-');
+        $c = strpos($text, '*');
+        $d = strpos($text, ':');
+
+        if ($a == true)
+        {
+            $z = substr($text, 0, $a);
+            $x = substr($text, $a);
+            $text1 = $z+$x;
+        }else{
+            $text1 = 'xato';
+        }
+
+
+
+
+        $this->sendMessage($chat_id, $text1);
 
     }
 
