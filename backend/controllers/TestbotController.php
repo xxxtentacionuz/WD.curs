@@ -10,21 +10,23 @@ class TestbotController extends Controller
 {
     public function actionTest()
     {
-        $text = '10+10';
-        $x ='10';
-        $z ='10';
-        $x= (int)$x;
-        $z= (int)$z;
+        $text = '2*11';
         $a = strpos($text, '+');
         $b = strpos($text, '-');
         $c = strpos($text, '*');
         $d = strpos($text, ':');
 
-        if ($a == true)
+
+
+        if ($c == true)
         {
-            $z = substr($text, 0, $a);
+            $z = substr($text, 0, $c);
             $x = substr($text, $a);
-            echo  $z+$x;
+             $x=(int)$x * $z=(int)$z;
+            echo $x * $z;
+
+
+
 
         }else{
             $text1 = 'xato';
@@ -57,17 +59,17 @@ class TestbotController extends Controller
             $text1 = $z+$x;
         }elseif ($b == true)
         {
-            $z = substr($text, 0, $a);
+            $z = substr($text, 0, $b);
             $x = substr($text, $a);
             $text1 = $z-$x;
         }elseif ($c == true)
         {
-            $z = substr($text, 0, $a);
+            $z = substr($text, 0, $c);
             $x = substr($text, $a);
             $text1 = $z*$x;
         }elseif ($d == true)
         {
-            $z = substr($text, 0, $a);
+            $z = substr($text, 0, $d);
             $x = substr($text, $a);
             $text1 = $z/$x;
         }else
