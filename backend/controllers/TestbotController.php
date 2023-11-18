@@ -11,6 +11,10 @@ class TestbotController extends Controller
     public function actionTest()
     {
         $text = '10+10';
+        $x ='10';
+        $z ='10';
+        $x= (int)$x;
+        $z= (int)$z;
         $a = strpos($text, '+');
         $b = strpos($text, '-');
         $c = strpos($text, '*');
@@ -41,6 +45,10 @@ class TestbotController extends Controller
         $b = strpos($text, '-');
         $c = strpos($text, '*');
         $d = strpos($text, ':');
+        $x ='10';
+        $z ='10';
+        $x= (int)$x;
+        $z= (int)$z;
 
         if ($a == true)
         {
