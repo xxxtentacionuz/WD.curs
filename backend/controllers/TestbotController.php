@@ -51,12 +51,12 @@ class TestbotController extends Controller
             $x = substr($text, $a);
             $x = trim($x, '+');
             $text1 = (int)$z + (int)$x ;
-        }elseif ($text == 'Ahmad')
+        }elseif ($text == 'Ahmad'& 'Ahmadbek')
         {
-            echo 'Ahamd ukam kut bumay botni tarqat'
-        }elseif ($text == 'Ahmad')
+            echo 'Ahamd ukam kut bumay botni tarqat';
+        }elseif ($text == 'Shahboz')
         {
-            echo 'Shahboz dustim kut bumay botni tarqat'
+            echo 'Shahboz dustim kut bumay botni tarqat';
         }
         elseif ($b == true)
         {
