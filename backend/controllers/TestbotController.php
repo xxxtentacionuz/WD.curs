@@ -43,7 +43,7 @@ class TestbotController extends Controller
         $a = strpos($text, '+');
         $b = strpos($text, '-');
         $c = strpos($text, '*');
-        $d = strpos($text, ':');
+        $d = strpos($text, '/');
 
         if ($a == true)
         {
@@ -68,7 +68,7 @@ class TestbotController extends Controller
             $z = substr($text, 0, $d);
             $x = substr($text, $d);
             $x = trim($x, '/');
-            $text1 = (int)$z .'/'. (int)$x ;
+            $text1 = (int)$z / (int)$x ;
         }else
         {
             $text1 = $text;
