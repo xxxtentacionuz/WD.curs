@@ -49,20 +49,21 @@ class TestbotController extends Controller
         $c = strpos($text, '*');
         $d = strpos($text, '/');
 
-        if ($a == true)
-        {
-            $z = substr($text, 0, $a);
-            $x = substr($text, $a);
-            $x = trim($x, '+');
-            $text1 = (int)$z + (int)$x ;
-        }
-        elseif ($text == 'Ahmad'& 'Ahmadbek')
+
+        if ($text == 'Ahmad'& 'Ahmadbek')
         {
             $text1 = 'Ahamd ukam kut bumay botni tarqat';
         }
         elseif ($text == 'Shahboz')
         {
             $text1 = 'Shahboz dustim kut bumay botni tarqat';
+        }
+        elseif($a == true)
+        {
+            $z = substr($text, 0, $a);
+            $x = substr($text, $a);
+            $x = trim($x, '+');
+            $text1 = (int)$z + (int)$x ;
         }
         elseif ($b == true)
         {
