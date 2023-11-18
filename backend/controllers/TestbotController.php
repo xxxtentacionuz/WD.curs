@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 
+use backend\models\telegram;
 use yii\web\Controller;
 
 class TestbotController extends Controller
@@ -35,16 +36,16 @@ class TestbotController extends Controller
 
     public function actionWebhook()
     {
-        $data = json_decode(file_get_contents('php://input'),true);
+        $telegram = new telegram();
+        $data = $telegram->getData();
+
         $chat_id = $data['message']['from']['id'];
-        $text = $data['message']['text'];
+        $text = isset($data['message']['text']) ? $data['message']['text']: '';
 
         $data = [
             'chat_id' => $chat_id,
             'text' => $text,
-
         ];
-
 
         $token = "6816596578:AAGcblyvf4sGmrvMY3iPf4TCou2nwnMiQFI";
         $url = 'https://api.telegram.org/bot'.$token.'/sendMessage?'.http_build_query($data);
