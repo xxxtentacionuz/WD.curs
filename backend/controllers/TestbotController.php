@@ -47,14 +47,27 @@ class TestbotController extends Controller
             $z = substr($text, 0, $a);
             $x = substr($text, $a);
             $text1 = $z+$x;
-        }else{
-            $text1 = 'xato';
+        }elseif ($b == true)
+        {
+            $z = substr($text, 0, $a);
+            $x = substr($text, $a);
+            $text1 = $z-$x;
+        }elseif ($c == true)
+        {
+            $z = substr($text, 0, $a);
+            $x = substr($text, $a);
+            $text1 = $z*$x;
+        }elseif ($d == true)
+        {
+            $z = substr($text, 0, $a);
+            $x = substr($text, $a);
+            $text1 = $z/$x;
         }
 
 
 
 
-        $this->sendMessage($chat_id, $text1);
+        $this->sendMessage($chat_id, $text);
 
     }
 
