@@ -21,18 +21,23 @@ class TestbotController extends Controller
     {
         $this->token = '6816596578:AAGcblyvf4sGmrvMY3iPf4TCou2nwnMiQFI';
         $this->telegram = new telegram($this->token);
+
         $data = $this->telegram->getData();
 
         $this->chat_id = $data['message']['from']['id'];
-        $text='salom2'; //isset($data['message']['text']) ? $data['message']['text']: '';
+        $this->text = isset($data['message']['text']) ? $data['message']['text']: '';
 
-
-        if ($this->text == 'photo')
-        {$this->sendMessage('alo');
+        if ($this->text == '/start')
+        {
+            $text = "salom aka bu if";
+            $this->sendMessage($text);
+        }elseif ($this->text == 'photo')
+        {
+            $this->sendMessage('alo');
             $content =[
-            'chat_id'=>$this->chat_id,
+                    'chat_id'=>$this->chat_id,
     //               'caption'=>'aka 1mana rasm',
-                    'photo'=>'http://wd.curs/admn/botImage/newyear1.jpg',
+                    'photo'=>'http://wd.curs/admn/botImage/newyear1.jpg'
                 ];
             $this->telegram->sendPhoto($content);
         }
