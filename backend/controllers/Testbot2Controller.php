@@ -7,7 +7,7 @@ namespace backend\controllers;
 use backend\telegram\Telegram;
 use yii\web\Controller;
 
-class TestbotController extends Controller
+class Testbot2Controller extends Controller
 {
     public $enableCsrfValidation = false;
 
