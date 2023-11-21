@@ -1,7 +1,7 @@
 <?php
 namespace backend\telegram;
 
-use beckend\telegram\telegramErrorLogger;
+use backend\telegram\TelegramErrorLogger;
 
 /**
  * Telegram Bot Class.

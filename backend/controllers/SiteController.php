@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\telegram\Telegram;
 use common\models\LoginForm;
 use Yii;
 use yii\filters\VerbFilter;
@@ -62,6 +63,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $token = '6816596578:AAGcblyvf4sGmrvMY3iPf4TCou2nwnMiQFI';
+        $telegram = new telegram($token);
+        $content = ['chat_id'=>844272310, 'text'=>'salom1111'];
+        $telegram->sendMessage($content);
         return $this->render('index');
     }
 
