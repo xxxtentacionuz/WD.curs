@@ -16,7 +16,6 @@ class TestbotController extends Controller
     public $telegram;
     public $chat_id;
     public $text;
-    public $content;
 
     public function actionWebhook()
     {
@@ -30,12 +29,12 @@ class TestbotController extends Controller
 
         if ($this->text == 'photo')
         {$this->sendMessage('alo');
-            $this->content =[
+            $content =[
                     'chat_id'=>$this->chat_id,
     //               'caption'=>'aka 1mana rasm',
                     'photo'=>'http://wd.curs/admn/botImage/newyear1.jpg',
                 ];
-            $this->telegram->sendPhoto($this->content);
+            $this->telegram->sendPhoto($content);
         }
     }
 
