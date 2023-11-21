@@ -24,8 +24,8 @@ class TestbotController extends Controller
         $data = $this->telegram->getData();
 
         $this->chat_id = $data['message']['from']['id'];
-//        $this->text='salom2'; //isset($data['message']['text']) ? $data['message']['text']: '';
-        $this->sendMessage($this->text);
+        $this->text='salom2'; //isset($data['message']['text']) ? $data['message']['text']: '';
+
 
         if ($this->text == 'photo')
         {$this->sendMessage('alo');
