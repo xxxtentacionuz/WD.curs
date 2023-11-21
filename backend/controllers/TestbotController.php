@@ -3,7 +3,8 @@
 namespace backend\controllers;
 
 
-use backend\models\telegram;
+
+use backend\telegram\Telegram;
 use yii\web\Controller;
 
 class TestbotController extends Controller
@@ -38,7 +39,8 @@ class TestbotController extends Controller
 
     public function actionWebhook()
     {
-        $telegram = new telegram();
+        $token = '6816596578:AAGcblyvf4sGmrvMY3iPf4TCou2nwnMiQFI';
+        $telegram = new telegram($token);
         $data = $telegram->getData();
 
         $chat_id = $data['message']['from']['id'];
