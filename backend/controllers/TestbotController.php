@@ -36,7 +36,7 @@ class TestbotController extends Controller
             $content =[
                     'chat_id'=>$this->chat_id,
     //               'caption'=>'aka 1mana rasm',
-                    'photo'=>'http://wd.curs/admn/botImage/newyear1.jpg'
+                    'photo' => 'https://wd.curs/admn/botImage/newyear1.jpg'
                 ];
             $this->telegram->sendPhoto($content);
         }
