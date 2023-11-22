@@ -46,6 +46,13 @@ class TestbotController extends Controller
                 'video'=>'https://s.nugaev.uz/admn/botvideo/video1.mp4',
             ];
             $this->telegram->sendVideo($content);
+        }elseif ($this->text == 'audio')
+        {
+            $content =[
+                'chat_id'=>$this->chat_id,
+                'audio'=>'https://s.nugaev.uz/admn/botaudio/forema.mp3',
+            ];
+            $this->telegram->sendAudio($content);
         }
     }
 
