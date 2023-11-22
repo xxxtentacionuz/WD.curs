@@ -33,7 +33,11 @@ class TestbotController extends Controller
             $this->sendMessage($text);
         }elseif ($this->text == 'photo')
         {
-            $content =['chat_id'=>$this->chat_id, 'photo'=>'https://s.nugaev.uz/admn/images.png'];
+            $content =[
+                'chat_id'=>$this->chat_id,
+                'photo'=>'https://s.nugaev.uz/admn/images.png',
+                'caption'=>'aka mana rasm',
+            ];
             $this->telegram->sendPhoto($content);
         }
     }
