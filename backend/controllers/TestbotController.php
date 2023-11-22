@@ -44,7 +44,6 @@ class TestbotController extends Controller
             $content =[
                 'chat_id'=>$this->chat_id,
                 'video'=>'https://s.nugaev.uz/admn/botVideo/video1.mp4',
-                'caption'=>'aka mana video',
             ];
             $this->telegram->sendVideo($content);
         }
